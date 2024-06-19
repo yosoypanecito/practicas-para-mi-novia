@@ -13,7 +13,7 @@
 </head>
 <body>
     <marquee>recuerdos de 19/06/2024</marquee>
-    <h1>✨Te amo mil millones mi estrellita anel✨</h1>
+    <h1>✨Te amo mil billions mi estrellita anel✨</h1>
     <div id="gif-container">
         <center>
           <h2>¿Quieres ser mi novia?</h2>
@@ -53,12 +53,18 @@
                     por eso te hago esta pagina de casi 500 lineas<br>
                     para decirte cuanto te amo y cuanto te amare.<br>
                 </blockquote>
+                <center>
+          <img src="https://www.fmdos.cl/wp-content/uploads/2016/08/gato-pareja.gif" width="100" height="100">
+        </center>
             `;
         });
 
         noButton.addEventListener('click', () => {
             respuestaDiv.innerHTML = `
                 <p>¿Estás segura?</p>
+                <center>
+                  <img src="https://media.tenor.com/P3RqQUUK9BAAAAAM/rip-juice-cry.gif" width="100" height="100">
+                </center>
                 <button id="si-segura">Sí</button>
                 <button id="no-segura">No</button>
             `;
@@ -72,27 +78,4 @@
 
             noSeguraButton.addEventListener('click', () => {
                 respuestaDiv.innerHTML = `
-                    <p>¿Estás segura?</p>
-                    <button id="si-segura">Sí</button>
-                    <button id="no-segura">No</button>
-                `;
-                while (true) {
-                    const respuesta = prompt('¿Estás segura?');
-                    if (respuesta === 'no') {
-                        break;
-                    }
-                }
-                respuestaDiv.innerHTML = `
-                    <p>esta bien te dare otra oportunidad de pensarlo, yo sabia que me amabas corazon, para que dijeras que no, siempre confie en ti</p>
-                    <p>picale al boton de volver mi vida<p>
-                    <button id="volver">Volver</button>
-                `;
-                const volverButton = document.getElementById('volver');
-                volverButton.addEventListener('click', () => {
-                    location.reload();
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                    <p>¡Ay, caramba! Me lastimaste el
