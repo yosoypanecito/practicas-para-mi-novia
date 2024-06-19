@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haniwisn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <marquee>recuerdos de 19/06/2024</marquee>
+    <h1>✨Te amo mil millones mi estrellita anel✨</h1>
+    <div id="gif-container">
+        <center>
+          <h2>¿Quieres ser mi novia?</h2>
+          <img src="https://i.pinimg.com/originals/3c/4c/9b/3c4c9bbafbb68491e8e785e0029d9ba9.gif" width="100" height="100">
+        </center>
+      </div>
+    <button id="si">Sí</button>
+    <button id="no">No</button>
+
+    <div id="respuesta"></div>
+
+    <script>
+        const siButton = document.getElementById('si');
+        const noButton = document.getElementById('no');
+        const respuestaDiv = document.getElementById('respuesta');
+
+        siButton.addEventListener('click', () => {
+            respuestaDiv.innerHTML = `
+                <p>Gracias mi amor, ahora si oficialmente somos novios</p>
+                <p>Te amo muchismooo</p>
+                <blockquote>
+                    Eres la luz que ilumina mi camino,<br>
+                    la estrella que guía mi corazón.<br>
+                    Sin ti, no hay vida para mí,<br>
+                    eres mi todo, mi razón ❤✨<br>
+                <p></p>
+                    A un que siempre me la pase llorando por tu alejamiento<br>
+                    solo con el corazon sigo pensando en ti<br>
+                    esta bien si me lastimas o no, si veo borroso cada que lloro<br>
+                    gritando tu nombre a mil llantos y pidiendo que vuelvas<br>
+                    ya que me perdi en tu mirada<br>
+                    es que el color de tus ojos me encantan"<br>
+                    no eran azules, ni verdes<br>
+                    eran color cafe, cafe que te quita el sueño<br>
+                    cafes que producen desvelos<br>
+                    y a mi me gusta desvelarme<br>
+                    por eso te hago esta pagina de casi 500 lineas<br>
+                    para decirte cuanto te amo y cuanto te amare.<br>
+                </blockquote>
+            `;
+        });
+
+        noButton.addEventListener('click', () => {
+            respuestaDiv.innerHTML = `
+                <p>¿Estás segura?</p>
+                <button id="si-segura">Sí</button>
+                <button id="no-segura">No</button>
+            `;
+
+            const siSeguraButton = document.getElementById('si-segura');
+            const noSeguraButton = document.getElementById('no-segura');
+
+            siSeguraButton.addEventListener('click', () => {
+                location.reload(); // Regresar al menú principal
+            });
+
+            noSeguraButton.addEventListener('click', () => {
+                respuestaDiv.innerHTML = `
+                    <p>¿Estás segura?</p>
+                    <button id="si-segura">Sí</button>
+                    <button id="no-segura">No</button>
+                `;
+                while (true) {
+                    const respuesta = prompt('¿Estás segura?');
+                    if (respuesta === 'no') {
+                        break;
+                    }
+                }
+                respuestaDiv.innerHTML = `
+                    <p>esta bien te dare otra oportunidad de pensarlo, yo sabia que me amabas corazon, para que dijeras que no, siempre confie en ti</p>
+                    <p>picale al boton de volver mi vida<p>
+                    <button id="volver">Volver</button>
+                `;
+                const volverButton = document.getElementById('volver');
+                volverButton.addEventListener('click', () => {
+                    location.reload();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
